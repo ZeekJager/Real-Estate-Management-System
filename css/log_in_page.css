@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../assets/house_with_blue_swimming_pool.jpg");
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+
+
+
+
+/*-------------***container***-------------*/
+.container{
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+}
+
+
+/*-------------description-------------*/
+.container .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 10px;
+    width: 400px;
+    padding: 10px;
+    background: white;
+}
+
+.container .description h2{
+    color: blue;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.container .description p{
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.container .description a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: blue;
+}
+
+.container .description a:hover{
+    background: darkblue;
+}
+
+
+/*-------------contact form-------------*/
+.container .input_form{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 440px;
+    padding: 30px 40px 40px 40px;
+    background: #00082c;
+}
+
+.container .input_form h2{
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container .input_form p{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.container .input_form input{
+    color: white;
+    border: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+}
+
+.container .input_form i{
+    position: absolute;
+    top: 28%;
+    right: 20px;
+    color: white;
+}
+
+.container .input_form div{
+    display: flex;
+    justify-content: center;
+}
+
+.container .input_form button{
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: transparent;
+    transition: 1s;
+}
+
+.container .input_form button:hover{
+    border: 2px solid darkblue;
+    background: darkblue;
+}
+
+
+
+
+/*-------------additional css-------------*/
+.style_pass{
+    color: lightgreen;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.style_fail{
+    color: red;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}

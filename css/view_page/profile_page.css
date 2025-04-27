@@ -1,0 +1,325 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body > a{
+    position: absolute;
+    color: blue;
+    top: 40px;
+    left: 10px;
+}
+
+
+
+
+
+/*-------------***header***-------------*/
+header{
+    position: fixed;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    background: #212529;
+    overflow: hidden;
+    transition: 1s;
+    z-index: -1;
+}
+
+.hide_header{
+    width: 80px;
+}
+
+
+/*-------------label-------------*/
+header .label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  
+    height: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+header .label label{
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+header .label span{
+    color: blue;
+}
+
+.hide_label{
+    display: none;
+}
+
+
+/*-------------details-------------*/
+header .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header .details div{
+    font-size: 14px;
+    padding: 15px 20px;
+}
+
+header .details div:first-child{
+    margin-top: 30px;
+}
+
+header .details div i{
+    font-size: 20px;
+}
+
+header .details div span{
+    margin-left: 5px;
+}
+
+
+
+
+/*-------------***main***-------------*/
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* -----------------------*/
+.container1{
+    position: absolute;
+    top: 53px;
+    left: 270px;
+    width: 1000px;
+}
+
+.container2{
+    display: none;
+    position: absolute;
+    top: 53px;
+    left: 270px;
+    width: 1000px;
+}
+
+
+/* ------------------------ */
+main .style .display{
+    padding-bottom: 50px;
+}
+
+main .style .display h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main .style .display h1 span{
+    color: blue;
+}
+
+main .style  .display .search{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+main .style  .display .search input{
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    padding-right: 90px;
+    background: rgb(231, 230, 230);
+}
+
+main .style  .display .search button{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: blue;
+}
+
+main .style  .display .search button:hover{
+    background: darkblue;
+}
+
+main .style .display .buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+main .style .display .buttons button{
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: blue;
+}
+
+main .style .display .buttons button:hover{
+    background: darkblue;
+}
+
+.houses_container1{
+    position: relative;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 100px;
+    margin-bottom: 100px;
+}
+
+.houses_container2{
+    position: relative;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 100px;
+    margin-bottom: 100px;
+}
+
+main .style .display .houses{
+    position: relative;
+    border: transparent;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    width: 350px;
+    height: 430px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+main .style .display .houses .image{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+main .style .display .houses .image img{
+    filter: brightness(60%);
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+main .style .display .houses:hover .image img{
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+main .style .display .houses .details{
+    width: 100%;
+    height: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #00082c;
+}
+
+main .style .display .houses .details h4{
+    color: white;
+    font-weight: 800;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+main .style .display .houses .details p{
+    display: inline;
+    color: gray;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+main .style .display .houses .details p:nth-of-type(2){
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 5px;
+    backdrop-filter: blur(20px);
+    text-shadow: 5px 5px 10px black;
+}
+
+main .style .display .houses .details i{
+    color: gray;
+    margin-right: 10px;
+}
+
+main .style .display .houses .slide{
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid white;
+    border-radius: 10px;
+    height: 30px;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #00082c;
+    transition: 1s;
+}
+
+main .style .display .houses .slide:hover{
+    height: 200px;
+}
+
+main .style .display .houses .slide div{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+}
+
+main .style .display .houses .slide div i{
+    margin-right: 2px;
+}
+
+main .style .display .houses .slide a{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px 5px;
+    background: transparent;
+}
+
+main .style .display .houses .slide a:hover{
+    border: 1px solid darkblue;
+    background: darkblue;
+}
+
+.style_fail_5{
+    position: absolute;
+    top: 100px;
+    left: 330px;
+    color: blue;
+    font-weight: 600;
+}

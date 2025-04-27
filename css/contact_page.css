@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+
+/*-------------***container***-------------*/
+.container{
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+}
+
+
+/*-------------description-------------*/
+.container .description{
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 500px;
+    padding: 10px;
+    background: white;
+}
+
+.container .description h2{
+    color: blue;
+    font-weight: 800;
+    margin-bottom: 70px;
+}
+
+.container .description .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .description img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 70px;
+}
+
+.container .description p{
+    margin-bottom: 10px;
+}
+
+.container .description i{
+    cursor: pointer;
+    color: blue;
+    font-size: 20px;
+    margin-right: 20px;
+    transition: 1s;
+}
+
+.container .description .fa-brands:hover{
+    transform: scale(1.2);
+}
+
+.container .description .blue_circle{
+    position: absolute;
+    top: -65px;
+    left: -65px;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    background: blue;
+    z-index: -1;
+}
+
+
+/*-------------contact form-------------*/
+.container .contact_form{
+    position: relative;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    width: 500px;
+    padding: 10px 40px 10px 40px;
+    background: #00082c;
+}
+
+.container .contact_form h2{
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.container .contact_form input{
+    color: white;
+    border: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    background: transparent;
+    outline: none;
+}
+
+.container .contact_form input:last-of-type{
+    height: 100px;
+}
+
+.container .contact_form div{
+    display: flex;
+    justify-content: center;
+}
+
+.container .contact_form button{
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: transparent;
+    transition: 1s;
+}
+
+.container .contact_form button:hover{
+    border: 2px solid darkblue;
+    background: darkblue;
+}

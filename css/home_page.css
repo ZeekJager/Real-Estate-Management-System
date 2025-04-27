@@ -1,0 +1,1197 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------***background video***-------------*/
+video{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+label{
+    display: none;
+    z-index: 6;
+}
+
+.media_query{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 0;
+    height: 100%;
+    background: #00082c;
+    opacity: 0.8;
+    transition: 1s;
+    overflow: hidden;
+    z-index: 5;
+}
+
+input[type="checkbox"]:checked ~ .media_query{
+    width: 100%;
+}
+
+.media_query a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.media_query a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 20px;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: 1s;
+}
+
+.media_query a:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+/*-------------***Section 1***-------------*/
+.section_1{
+    width: 100%;
+    height: 100vh;
+}
+
+
+/*-------------header-------------*/
+.section_1 header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vh;
+    padding: 2% 5%;
+}
+
+.section_1 header h1{
+    color: white;
+}
+
+.section_1 header h1 span{
+    color: blue;
+}
+
+.section_1 header h1{
+    display: inline;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.section_1 header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+}
+
+.section_1 header nav a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.section_1 header nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 20px;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: 1s;
+}
+
+.section_1 header nav a:hover::after{
+    width: 100%;
+}
+
+.section_1 header nav a:last-of-type:hover{
+    background: blue;
+}
+
+
+/*-------------main-------------*/
+.section_1 main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+
+    /* animation */
+    animation-name: slideRight;
+    animation-duration: 4s;
+}
+
+.section_1 main h1{
+    color: blue;
+    font-size: 55px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.section_1 main h1 span{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.section_1 main a{
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    background: darkblue;
+}
+
+.section_1 main a:hover{
+    background: #00082c;
+}
+
+
+
+
+
+/*-------------***Section 2***-------------*/
+.section_2{
+    display: flex;
+    height: 100vh;
+    padding: 6vh 5vw;
+}
+
+
+/*-------------header-------------*/
+.section_2 header{
+    position: relative;
+}
+
+.section_2 header .image_1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+}
+
+.section_2 header .image_2{
+    border: 15px solid white;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    box-shadow: 5px 5px 10px black;
+    width: 400px;
+    height: 510px;
+    margin-top: 40px;
+    margin-left: 41px;
+    margin-right: 4vw;
+}
+
+.section_2 header .image_3{
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    border: 5px solid white;
+    box-shadow: 5px 5px 10px black;
+    width: 300px;
+    height: 200px;
+
+    /* animation */
+    animation-name: slideRight_and_Left;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+/*-------------main-------------*/
+.section_2 main{
+    padding-top: 15vh;
+}
+
+.section_2 main h1{
+    color: #00082c;
+    font-size: 23px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section_2 main div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    margin: 30px;
+}
+
+.section_2 main p{
+    color: gray;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.section_2 main > p:last-of-type{
+    margin-bottom: 30px;
+}
+
+.section_2 main .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_2 main a{
+    color: darkblue;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 3px solid darkblue;
+    padding: 10px 20px;
+    transition: 1s;
+}
+
+.section_2 main a:hover{
+    color: white;
+    border-color: #00082c;
+    background: #00082c;
+}
+
+
+
+
+
+/*-------------***Section 3***-------------*/
+.section_3{
+    padding: 6vh 5vw;
+    background: rgb(241, 241, 241);
+}
+
+
+/*-------------header-------------*/
+.section_3 header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.section_3 header h1{
+    color: #00082c;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.section_3 header h3{
+    color: gray;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/*-------------main-------------*/
+.section_3 main{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.section_3 main #houses{
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    width: 350px;
+    height: 450px;
+    background: white;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.section_3 main #houses .image{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.section_3 main #houses .image img{
+    filter: brightness(60%);
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.section_3 main #houses:hover .image img{
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+.section_3 main #houses #details{
+    width: 318px;
+    height: 200px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.section_3 main #houses #details h1{
+    color: #00082c;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.section_3 main #houses #details p{
+    display: inline;
+    color: gray;
+}
+
+.section_3 main #houses #details i{
+    color: #00082c;
+    margin-right: 10px;
+}
+
+.section_3 main #houses #details p:first-of-type{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    font-size: 12px;
+    border-radius: 100px;
+    padding: 5px;
+    backdrop-filter: blur(20px);
+    text-shadow: 5px 5px 10px black;
+    filter: brightness(60%);
+    transition: 1s;
+}
+
+.section_3 main #houses:hover #details p:first-of-type{
+    filter: brightness(100%);
+}
+
+.section_3 main #houses #details a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px 5px;
+    background: darkblue;
+}
+
+.section_3 main #houses #details a:hover{
+    background: #00082c;
+}
+
+
+
+
+
+/*-------------***Section 4***-------------*/
+.section_4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 6vh 5vw;
+}
+
+
+/*-------------main-------------*/
+.section_4 main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 200px;
+    grid-template-areas: 
+    "card_1 card_1 card_2"
+    "card_3 card_4 card_5";
+    grid-gap: 20px;
+    grid-row-gap: 30px;
+    width: 100%;
+}
+
+.section_4 main div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_4 main .card_1{
+    grid-area: card_1;
+    border-top-left-radius: 50px;
+    background-image: url("../assets/house_with_blue_swimming_pool.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+.section_4 main .card_1:hover{
+    background-image: url("../assets/stair_case.webp");
+    box-shadow: 5px 5px 10px black;
+}
+
+.section_4 main .card_2{
+    grid-area: card_2;
+    background-image: url("../assets/green_area_with_sun_light.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+.section_4 main .card_2:hover{
+    background-image: url("../assets/green_area_with_sun_light_2.webp");
+    box-shadow: 5px 5px 10px black;
+}
+
+.section_4 main .card_3{
+    grid-area: card_3;
+    background-image: url("../assets/security_lock.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+.section_4 main .card_3:hover{
+    background-image: url("../assets/security_lock_2.webp");
+    box-shadow: 5px 5px 10px black;
+}
+
+.section_4 main .card_4{
+    grid-area: card_4;
+    background-image: url("../assets/house_with_car.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+.section_4 main .card_4:hover{
+    background-image: url("../assets/house_with_blue_swimming_pool.jpg");
+    box-shadow: 5px 5px 10px black;
+}
+
+.section_4 main .card_5{
+    grid-area: card_5;
+    background-image: url("../assets/woman_spreading_her_arm.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+.section_4 main .card_5:hover{
+    background-image: url("../assets/woman_spreading_her_arm_2.jpg");
+    box-shadow: 5px 5px 10px black;
+}
+
+.section_4 main p{
+    color: white;
+    font-weight: 800;
+}
+
+.section_4 main div button{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid white;
+    padding: 5px 10px;
+    background: transparent;
+    transition: 1s;
+}
+
+.section_4 main div button:hover{
+    text-shadow: 5px 5px 10px black;
+    border-color: #00082c;
+    background: #00082c;
+}
+
+
+
+
+
+/*-------------***Section 5***-------------*/
+.section_5{
+    position: relative;
+    color: white;
+    padding: 6vh 6vw;
+    background: #00082c;
+}
+
+
+/*-------------header-------------*/
+.section_5 header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_5 header form{
+    display: flex;
+}
+
+.section_5 header input{
+    color: black;
+    border: none;
+    border-radius: 100px 0 0 100px;
+    width: 500px;
+    height: 35px;
+    padding: 5px 10px;
+    background: lightgray;
+    outline: none;
+}
+
+.section_5 header button{
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 0 100px 100px 0;
+    width: 150px;
+    height: 45px;
+    padding: 5px 5px;
+    background: transparent;
+    transition: 1s;
+}
+
+.section_5 header button:hover{
+    border-color: blue;
+    background: blue;
+}
+
+
+/*-------------main-------------*/
+.section_5 main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+}
+
+.section_5 main div h3{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section_5 main div p, .section_5 main div a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section_5 main div .socials{
+    display: flex;
+}
+
+.section_5 main div i{
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.section_5 main div .fa-brands{
+    cursor: pointer;
+    transition: 1s;
+}
+
+.section_5 main div .fa-brands:hover{
+    transform: scale(1.2);
+}
+
+
+/*-------------footer-------------*/
+.section_5 footer{
+    border: solid #00082c;
+}
+
+.section_5 footer p{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/*-------------additional css-------------*/
+.section_3 .style{
+    color: blue;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.section_5 header{
+    border: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_5 header .style{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section_5 header .pass{
+    color: lightgreen;
+    font-weight: 600;
+}
+
+.section_5 header .fail{
+    color: red;
+    font-weight: 600;
+}
+
+
+
+
+
+/*-------------animations-------------*/
+/*-------------***section 1***-------------*/
+@keyframes slideRight {
+    from{
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+/*-------------***section 2***-------------*/
+@keyframes slideRight_and_Left {
+    50%{
+        transform: translateX(50%);
+    }
+}
+
+@keyframes slide_up {
+    from{
+        transform: translateY(150%);
+    }
+}
+
+
+
+
+
+/*-------------***Responsive***-------------*/
+@media (max-width: 1340px) {
+    .section_3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_3 main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+}
+
+@media (max-width: 950px) {
+    .section_1 header{
+        display: none
+    }
+
+    label{
+        display: block;
+    }
+
+    .section_1 main h1{
+        color: blue;
+        font-size: 30px;
+    }
+
+    .section_1 main h1 span{
+        font-size: 20px;
+    }
+
+    .section_1 main a{
+        font-size: 14px;
+        padding: 9px 18px;
+    }
+
+    .section_2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_2 header .image_1{
+        display: none;
+    }
+
+    .section_2 header .image_2{
+        display: none;
+    }
+
+    .section_2 header .image_3{
+        display: none;
+    }
+
+    .section_2 main{
+        padding-top: 5vh;
+    }
+
+    .section_2 main h1{
+        color: #00082c;
+        font-size: 16px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section_2 main p{
+        color: gray;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .section_2 main div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        margin: 30px;
+    }
+
+    .section_2 main > p:last-of-type{
+        margin-bottom: 30px;
+    }
+
+    .section_2 main .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_2 main a{
+        font-size: 12px;
+        border: 1px solid darkblue;
+        padding: 5px 10px;
+    }
+
+    .section_3 header h1{
+        font-size: 16px;
+    }
+
+    .section_3 header h3{
+        font-size: 12px;
+    }
+
+    .section_3 main #houses{
+        width: 300px;
+        height: 400px;
+    }
+
+    .section_3 main #houses .image{
+        height: 200px;
+    }
+
+    .section_3 main #houses #details{
+        width: 270px;
+        height: 150px;
+    }
+
+    .section_3 main #houses #details h1{
+        font-size: 14px;
+    }
+
+    .section_3 main #houses #details i{
+        margin-right: 5px;
+    }
+
+    .section_3 main #houses #details p:first-of-type{
+        font-size: 10px;
+    }
+
+    .section_3 main #houses #details p{
+        font-size: 12px;
+    }
+
+    .section_3 main #houses #details a{
+        padding: 3px 3px;
+    }
+}
+
+
+@media (max-width: 770px) {
+    .section_1 header{
+        display: none;
+    }
+
+    .section_1 main h1{
+        color: blue;
+        font-size: 30px;
+    }
+
+    .section_1 main h1 span{
+        font-size: 20px;
+    }
+
+    .section_1 main a{
+        font-size: 14px;
+        padding: 9px 18px;
+    }
+
+    .section_2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_2 header .image_1{
+        display: none;
+    }
+
+    .section_2 header .image_2{
+        display: none;
+    }
+
+    .section_2 header .image_3{
+        display: none;
+    }
+
+    .section_2 main{
+        padding-top: 5vh;
+    }
+
+    .section_2 main h1{
+        color: #00082c;
+        font-size: 16px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section_2 main div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        margin: 30px;
+    }
+
+    .section_2 main p{
+        color: gray;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .section_2 main > p:last-of-type{
+        margin-bottom: 30px;
+    }
+
+    .section_2 main .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_2 main a{
+        font-size: 12px;
+        border: 1px solid darkblue;
+        padding: 5px 10px;
+    }
+
+    .section_3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_3 header h1{
+        font-size: 16px;
+    }
+
+    .section_3 header h3{
+        font-size: 12px;
+    }
+
+    .section_3 main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+
+    .section_3 main #houses{
+        width: 300px;
+        height: 400px;
+    }
+
+    .section_3 main #houses .image{
+        height: 200px;
+    }
+
+    .section_3 main #houses #details{
+        width: 270px;
+        height: 150px;
+    }
+
+    .section_3 main #houses #details h1{
+        font-size: 14px;
+    }
+
+    .section_3 main #houses #details i{
+        margin-right: 5px;
+    }
+
+    .section_3 main #houses #details p:first-of-type{
+        font-size: 10px;
+    }
+
+    .section_3 main #houses #details p{
+        font-size: 12px;
+    }
+
+    .section_3 main #houses #details a{
+        padding: 3px 3px;
+    }
+
+    .section_4{
+        display: none;
+    }
+
+    .section_5 header input{
+        width: 300px;
+    }
+
+    .section_5 header button{
+        font-size: 12px;
+        width: 80px;
+    }
+
+    .section_5 main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_5 main div h3{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .section_5 main div{
+        margin-bottom: 20px;
+    }
+
+    .section_5 main div p, .section_5 main div a{
+        font-size: 10px;
+    }
+
+    .section_5 main div i{
+        font-size: 10px;
+        margin-right: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .section_1 header{
+        display: none;
+    }
+
+    .section_1 main h1{
+        color: blue;
+        font-size: 30px;
+    }
+
+    .section_1 main h1 span{
+        font-size: 20px;
+    }
+
+    .section_1 main a{
+        font-size: 14px;
+        padding: 9px 18px;
+    }
+
+    .section_2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_2 header .image_1{
+        display: none;
+    }
+
+    .section_2 header .image_2{
+        display: none;
+    }
+
+    .section_2 header .image_3{
+        display: none;
+    }
+
+    .section_2 main{
+        padding-top: 5vh;
+    }
+
+    .section_2 main h1{
+        color: #00082c;
+        font-size: 16px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section_2 main div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        margin: 30px;
+    }
+
+    .section_2 main p{
+        color: gray;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .section_2 main > p:last-of-type{
+        margin-bottom: 30px;
+    }
+
+    .section_2 main .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_2 main a{
+        font-size: 12px;
+        border: 1px solid darkblue;
+        padding: 5px 10px;
+    }
+
+    .section_3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_3 header h1{
+        font-size: 16px;
+    }
+
+    .section_3 header h3{
+        font-size: 12px;
+    }
+
+    .section_3 main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+
+    .section_3 main #houses{
+        width: 300px;
+        height: 400px;
+    }
+
+    .section_3 main #houses .image{
+        height: 200px;
+    }
+
+    .section_3 main #houses #details{
+        width: 270px;
+        height: 150px;
+    }
+
+    .section_3 main #houses #details h1{
+        font-size: 14px;
+    }
+
+    .section_3 main #houses #details i{
+        margin-right: 5px;
+    }
+
+    .section_3 main #houses #details p:first-of-type{
+        font-size: 10px;
+    }
+
+    .section_3 main #houses #details p{
+        font-size: 12px;
+    }
+
+    .section_3 main #houses #details a{
+        padding: 3px 3px;
+    }
+
+    .section_4{
+        display: none;
+    }
+
+    .section_5 header input{
+        width: 300px;
+    }
+
+    .section_5 header button{
+        font-size: 12px;
+        width: 80px;
+    }
+
+    .section_5 main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_5 main div h3{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .section_5 main div{
+        margin-bottom: 20px;
+    }
+
+    .section_5 main div p, .section_5 main div a{
+        font-size: 10px;
+    }
+
+    .section_5 main div i{
+        font-size: 10px;
+        margin-right: 20px;
+    }
+}

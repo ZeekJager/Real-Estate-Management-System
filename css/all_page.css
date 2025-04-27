@@ -1,0 +1,781 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="number"]{ /**/
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button{ /**/
+    -webkit-appearance: none;
+}
+
+label{
+    display: none;
+    z-index: 6;
+}
+
+.media_query{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 0;
+    height: 100%;
+    background: #00082c;
+    opacity: 0.8;
+    transition: 1s;
+    overflow: hidden;
+    z-index: 5;
+}
+
+input[type="checkbox"]:checked ~ .media_query{
+    width: 100%;
+}
+
+.media_query a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.media_query a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 20px;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: 1s;
+}
+
+.media_query a:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+/*-------------***Section 1***-------------*/
+.section_1{
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background: #00082c;
+}
+
+
+/*-------------header-------------*/
+.section_1 header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vh;
+    padding: 2% 5%;
+}
+
+.section_1 header h1{
+    color: white;
+}
+
+.section_1 header h1 span{
+    color: blue;
+}
+
+.section_1 header h1{
+    display: inline;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.section_1 header nav{
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+}
+
+.section_1 header nav a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    z-index: 3;
+}
+
+.section_1 header nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 20px;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: 1s;
+}
+
+.section_1 header nav a:hover::after{
+    width: 100%;
+}
+
+
+/*-------------main-------------*/
+.section_1 main{
+    height: 75vh;
+    padding: 6vh 5vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.section_1 main h1{
+    font-size: 40px;
+    z-index: 3;
+}
+
+.section_1 main h1:last-of-type{
+    margin-bottom: 40px;
+}
+
+.section_1 main .search{
+    position: relative;
+    width: 500px;
+    margin-bottom: 50px;
+    z-index: 3;
+}
+
+.section_1 main input{
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    padding-right: 90px;
+    outline: none;
+}
+
+.section_1 main button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: darkblue;
+}
+
+.section_1 main button:hover{
+    background: #00082c;
+}
+
+.section_1 main .statistics{
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+    z-index: 3;
+}
+
+.section_1 main .statistics h2{
+    color: white;
+}
+
+.section_1 main .statistics h2 span{
+    color: green;
+}
+
+.section_1 main .statistics h2 label{
+    color: gray;
+    font-size: 14px;
+}
+
+.section_1 main .view_all_property{
+    position: absolute;
+    left: 0;
+    bottom: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 3;
+}
+
+.section_1 main .view_all_property a{
+    text-decoration: none;
+}
+
+.section_1 main .view_all_property p{
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 1s;
+}
+
+.section_1 main .view_all_property p:hover{
+    transform: scale(1.1);
+}
+
+.section_1 main video{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade_top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 400px;
+    background: linear-gradient(to bottom, #00082c, transparent);
+    z-index: 2;
+}
+
+.fade_left{
+    position: absolute;
+    top: 0;
+    right: 20%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, #00082c, transparent);
+    z-index: 1;
+}
+
+.fade_bottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    height: 300px;
+    background: linear-gradient(to top, #00082c,  transparent);
+    z-index: 1;
+}
+
+
+
+
+
+/*-------------***Section 2***-------------*/
+.section_2{
+    padding: 4vh 5vw;
+    background: rgb(241, 241, 241);
+}
+
+
+/*-------------header-------------*/
+.section_2 header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px
+}
+
+.section_2 header .search_bar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin-bottom: 20px;
+    z-index: 3;
+}
+
+.section_2 header .search_bar input{
+    color: #00082c;
+    border: none;
+    border: 1px solid blue;
+    border-radius: 100px;
+    width: 100%;
+    height: 45px;
+    margin-right: 20px;
+    padding: 10px;
+    padding-right: 44px;
+    outline: none;
+}
+
+.section_2 header .search_bar button{
+    position: absolute;
+    top: 25%;
+    right: 60px;
+    cursor: pointer;
+    color: darkblue;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+}
+
+.section_2 header .search_bar button:hover{
+    color: #00082c;
+    background: transparent;
+}
+
+.section_2 header .search_bar p i{
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.section_2 header .filter_on_off{
+    margin-bottom: 20px;
+}
+
+.section_2 header .filter_on_off span{
+    cursor: pointer;
+    color: #00082c;
+    font-weight: 600;
+    border: 2px solid #00082c;
+    border-radius: 10px;
+    margin-right: 40px;
+    padding: 5px 10px;
+    background: white;
+    transition: 1s;
+}
+
+.section_2 header .filter_on_off span:hover{
+    color: white;
+    background: #00082c;
+}
+
+.section_2 header .container_of_additional_inputs{
+    display: none;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: 2s;
+}
+
+.section_2 header .additional_inputs{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.section_2 header .additional_inputs input{ /* */
+    cursor: pointer;
+    color: white;
+    border: none;
+    border: solid #00082c;
+    border-radius: 50px;
+    width: 60px;
+    height: 25px;
+    padding-left: 5px;
+    background: #00082c;
+    outline: none;
+    transition: 1s;
+}
+
+.section_2 header .additional_inputs input:focus{ /* */
+    cursor: text;
+    color: #00082c;
+    font-weight: 800;
+    border: none;
+    border-bottom: 1px solid #00082c;
+    border-radius: 0;
+    padding-left: 15px;
+    width: 190px;
+    background: transparent;
+}
+
+
+/*-------------main-------------*/
+.section_2 main .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.section_2 main .top p:first-of-type{
+    color: #00082c;
+    font-weight: 600;
+}
+
+.section_2 main .top p:last-of-type{
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    background: gray;
+}
+
+.section_2 main .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
+}
+
+.section_2 main #houses{
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    width: 350px;
+    height: 450px;
+    background: white;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.section_2 main #houses:hover{
+    transform: scale(1.02);
+}
+
+.section_2 main #houses .image{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.section_2 main #houses .image img{
+    filter: brightness(60%);
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.section_2 main #houses:hover .image img{
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+.section_2 main #houses #details{
+    width: 318px;
+    height: 200px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.section_2 main #houses #details h1{
+    color: #00082c;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.section_2 main #houses #details p{
+    display: inline;
+    color: gray;
+}
+
+.section_2 main #houses #details i{
+    color: #00082c;
+    margin-right: 10px;
+}
+
+.section_2 main #houses #details p:first-of-type{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    font-size: 12px;
+    border-radius: 100px;
+    padding: 5px;
+    backdrop-filter: blur(20px);
+    text-shadow: 5px 5px 10px black;
+    filter: brightness(60%);
+    transition: 1s;
+}
+
+.section_2 main #houses:hover #details p:first-of-type{
+    filter: brightness(100%);
+}
+
+.section_2 main #houses #details p:nth-of-type(n+4){
+    display: inline;
+}
+
+.section_2 main #houses #details a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px 5px;
+    background: darkblue;
+}
+
+.section_2 main #houses #details a:hover{
+    background: #00082c;
+}
+
+.section_2 footer{
+    margin-bottom: 250px;
+}
+
+.display_none{
+    display: none;
+}
+
+
+
+
+
+/*-------------***Section 3***-------------*/
+.section_3{
+    position: relative;
+    color: white;
+    padding: 6vh 6vw;
+    background: #00082c;
+}
+
+
+/*-------------main-------------*/
+.section_3 main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+}
+
+.section_3 main div h3{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section_3 main div p, .section_3 main div a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section_3 main div .socials{
+    display: flex;
+}
+
+.section_3 main div i{
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.section_3 main div .fa-brands{
+    cursor: pointer;
+    transition: 1s;
+}
+
+.section_3 main div .fa-brands:hover{
+    transform: scale(1.2);
+}
+
+
+/*-------------footer-------------*/
+.section_3 footer{
+    border: solid #00082c;
+}
+
+.section_3 footer p{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/*-------------additional css-------------*/
+.speech_to_text{
+    position: absolute;
+    top: 680px;
+    right: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 0;
+    height: 0;
+    background: #00082c;
+    box-shadow: 5px 5px 10px black;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.speech_to_text h1{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.speech_to_text textarea{
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: transparent;
+}
+
+.speech_to_text p i{
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.speech_to_text button{
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    background: transparent;
+    transition: 1s;
+}
+
+.speech_to_text button:hover{
+    border-color: darkblue;
+    background: darkblue;
+}
+
+.section_2 .style{
+    color: blue;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+
+
+/*-------------***Responsive***-------------*/
+@media (max-width: 1266px) {
+.section_2 main .cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_2 main .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+}
+}
+
+@media (max-width: 830px) {
+.section_1 header{
+    display: none;
+}
+
+label{
+    display: block;
+}
+
+.section_1 main h1{
+    font-size: 20px;
+}
+
+.section_1 main .search{
+    width: 400px;
+}
+
+.section_1 main .statistics{
+    width: 400px;
+}
+
+.section_2 header .search_bar{
+    width: 300px;
+}
+
+.section_2 main .cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_2 main .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 100px;
+}
+
+.section_2 main #houses{
+    width: 300px;
+    height: 400px;
+}
+
+.section_2 main #houses .image{
+    height: 200px;
+}
+
+.section_2 main #houses #details{
+    width: 270px;
+    height: 150px;
+}
+
+.section_2 main #houses #details h1{
+    font-size: 14px;
+}
+
+.section_2 main #houses #details p{
+    font-size: 12px;
+}
+
+.section_2 main #houses:hover #details p:first-of-type{
+    filter: brightness(100%);
+}
+
+.section_2 main #houses #details a{
+    font-size: 12px;
+    padding: 3px 3px;
+}
+
+    .section_3 header input{
+        width: 300px;
+    }
+
+    .section_3 header button{
+        font-size: 12px;
+        width: 80px;
+    }
+
+    .section_3 main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_3 main div h3{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .section_3 main div{
+        margin-bottom: 20px;
+    }
+
+    .section_3 main div p, .section_3 main div a{
+        font-size: 10px;
+    }
+
+    .section_3 main div i{
+        font-size: 10px;
+        margin-right: 20px;
+    }
+}

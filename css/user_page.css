@@ -1,0 +1,978 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+}
+
+input:focus{ /* */
+    outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button{ /**/
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]{ /**/
+    -moz-appearance: textfield;
+}
+
+
+
+
+
+/*-------------***header***-------------*/
+header{
+    position: static;
+    color: white;
+    width: 180px;
+    height: 100vh;
+    background: #00082c;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.hide_header{
+    width: 80px;
+}
+
+
+/*-------------brand_name-------------*/
+header .brand_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  
+    height: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+header .brand_name label{
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+header .brand_name span{
+    color: blue;
+}
+header img{
+    cursor: pointer;
+    transition: 1s;
+}
+
+.hide_label{
+    display: none;
+}
+
+.arrow_rotation{
+    transform: rotate(180deg);
+}
+
+
+/*-------------options-------------*/
+header .options{
+    width: 100%;
+}
+
+header .options div{
+    font-size: 14px;
+    padding: 15px 20px;
+}
+
+header .options div a{
+    color: white;
+}
+
+header .options div:first-child{
+    margin-top: 30px;
+}
+
+header .options div:last-child{
+    margin-top: 90px;
+}
+
+header .options div i{
+    color: white;
+    font-size: 20px;
+}
+
+header .options div span{
+    margin-left: 20px;
+}
+
+header .options div:hover{
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: black;
+}
+
+header .options div:active{
+    transform: scale(1.02);
+}
+
+.hide_option_labels{
+    display: none;
+}
+
+
+
+
+/*-------------***main***-------------*/
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100vh;
+    margin-left: 0px;
+}
+
+
+/*-------------info-------------*/
+.display .info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+    width: 750px;
+    height: 500px;
+    padding-bottom: 70px;
+    background: #00082c;
+    overflow: hidden;
+}
+
+.display .info img{
+    border-radius: 100%;
+    margin: 30px 0 30px 0;
+}
+
+.display .info p{
+    color: white;
+}
+
+.display .info p span{
+    color: blue;
+    font-weight: 700;
+}
+
+.display .info p:first-of-type{
+    margin-bottom: 5px;
+}
+
+.display .info .socials{
+    margin: 30px 0 30px 0;
+}
+
+.display .info a i{
+    color: white;
+    margin-right: 30px;
+}
+
+
+/*-------------down-------------*/
+.display .down{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    background: white;
+}
+
+
+
+
+
+/*-------------dashboard container-------------*/
+.dash_board_container{
+    flex: 1;
+    padding: 20px;
+}
+
+.dash_board_container .cards_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 190px;
+}
+
+.dash_board_container .cards_container .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 50px;
+    background: #00082c;
+}
+
+.dash_board_container .cards_container .card p:last-of-type{
+    color: lightgreen;
+}
+
+.dash_board_container .graphs_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    height: 320px;
+    padding: 20px;
+    background: #00082c;
+}
+
+.dash_board_container .sales_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.dash_board_container .sales_container .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 20px 40px;
+    background: #00082c;
+}
+
+.dash_board_container .sales_container .card p:last-of-type{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.dash_board_container .sales_container .card p span{
+    color: lightgreen;
+    font-weight: 600;
+}
+
+
+
+
+
+/*-------------profile_down-------------*/
+.down.profile_down{
+    transition: 1s;
+}
+
+.down.profile_down:hover{
+    height: 250px;
+}
+
+.down.profile_down label{
+    position: absolute;
+    top: -17px;
+    color: blue;
+    font-size: 14px;
+    font-weight: 800;
+    border: solid white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    padding: 2px 10px;
+    background: white;
+}
+
+.down.profile_down label i{
+    transition: 1s;
+}
+
+.down.profile_down:hover label i{
+    transform: rotate(-180deg);
+}
+
+.down.profile_down p{
+    position: absolute;
+    display: inline;
+    color: gray;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transform: translateY(1000%);
+    transition: 1s;
+}
+
+.down.profile_down:hover p{
+    transform: translateY(0);
+}
+
+.down.profile_down p:nth-of-type(1){
+    top: 50px;
+}
+
+.down.profile_down p:nth-of-type(2){
+    top: 100px;
+}
+
+.down.profile_down p:nth-of-type(3){
+    top: 150px;
+}
+
+.down.profile_down p:nth-of-type(4){
+    top: 200px;
+}
+
+.down.profile_down p i{
+    color: blue;
+}
+
+
+
+
+
+/*-------------update_down-------------*/
+.display .down.update_down{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    background: white;
+    transition: 5s;
+}
+
+.display .down.update_down:hover{
+    height: 480px;
+}
+
+.display .down.update_down > label{
+    position: absolute;
+    top: -17px;
+    color: blue;
+    font-size: 14px;
+    font-weight: 800;
+    border: solid white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    padding: 2px 10px;
+    background: white;
+    z-index: 1;
+}
+
+.display .down.update_down > label i{
+    transition: 3s;
+}
+
+.display .down.update_down:hover > label i{
+    transform: rotate(-180deg);
+}
+
+.display .down.update_down .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(1000px);
+    transition: 5s;
+}
+
+.display .down.update_down:hover .image{
+    transform: translateY(0);
+}
+
+.display .down.update_down .image label{
+    cursor: pointer;
+    position: static;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    padding: 6px 15px;
+    background: #00082c;
+    transform: translateY(0);
+}
+
+.display .down.update_down .image input{
+    display: none;
+}
+
+.display .down.update_down .fields{
+    margin-top: 60px;
+    padding-left: 72px;
+    opacity: 0;
+    transform: translateY(200%);
+    transition: 3s;
+}
+
+.display .down.update_down:hover .fields{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.display .down.update_down .fields i{
+    color: #00082c;
+    margin-right: 10px;
+}
+
+.display .down.update_down .fields input{
+    color: black;
+    font-weight: 600;
+    border: none;
+    border: 2px solid #00082c;
+    border-radius: 100px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+    padding: 10px 15px;
+    background: white;
+    transition: 1s;
+}
+
+.display .down.update_down .fields input:focus{
+    transform: scale(1.1);
+}
+
+.display .down.update_down .buttons div{
+    position: relative;
+    left: 245px;
+    opacity: 0;
+    transform: translateY(200%);
+    transition: 2s;
+}
+
+.display .down.update_down:hover .buttons div{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.display .down.update_down .buttons div button{
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 60px;
+    padding: 10px 15px;
+    background: rgb(0, 0, 92);
+    transition: 1s;
+}
+
+.display .down.update_down .buttons div button:hover{
+    transform: scale(1.1);
+    background: #00082c;
+} 
+
+
+
+
+
+/*-------------upload_down-------------*/
+.display .down.upload_down{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    background: white;
+    transition: 5s;
+}
+
+.display .down.upload_down:hover{
+    height: 480px;
+}
+
+.display .down.upload_down > label{
+    position: absolute;
+    top: -17px;
+    color: blue;
+    font-size: 14px;
+    font-weight: 800;
+    border: solid white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    padding: 2px 10px;
+    background: white;
+    z-index: 1;
+}
+
+.display .down.upload_down > label i{
+    transition: 3s;
+}
+
+.display .down.upload_down:hover > label i{
+    transform: rotate(-180deg);
+}
+
+.display .down.upload_down .image{
+    display: flex;
+    justify-content: center;
+    transform: translateY(1000%);
+    transition: 5s;
+}
+
+.display .down.upload_down:hover .image{
+    transform: translateY(30px);
+}
+
+.display .down.upload_down .image input{
+    display: none;
+}
+
+.display .down.upload_down .image label{
+    cursor: pointer;
+    position: static;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    padding: 5px 10px;
+    background: #00082c;
+}
+
+.display .down.upload_down .image label:active{
+    transform: scale(0.9);
+}
+
+.display .down.upload_down .fields{
+    margin-top: 60px;
+    padding-left: 72px;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: 3s;
+}
+
+.display .down.upload_down:hover .fields{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.display .down.upload_down .fields i{
+    color: #00082c;
+    margin-right: 10px;
+}
+
+.display .down.upload_down .fields input{
+    color: black;
+    font-weight: 600;
+    border: none;
+    border: 2px solid #00082c;
+    border-radius: 100px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+    padding: 10px 15px;
+    background: white;
+    transition: 1s;
+}
+
+.display .down.upload_down .fields input:focus{
+    transform: scale(1.1);
+}
+
+.display .down.upload_down .buttons div{
+    position: relative;
+    left: 245px;
+    opacity: 0;
+    transform: translateY(200%);
+    transition: 2s;
+}
+
+.display .down.upload_down:hover .buttons div{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.display .down.upload_down .buttons div button{
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 60px;
+    padding: 10px 15px;
+    background: rgb(0, 0, 92);
+    transition: 1s;
+}
+
+.display .down.upload_down .buttons div button:hover{
+    transform: scale(1.1);
+    background: #00082c;
+}
+
+
+
+
+
+/*-------------houses_down-------------*/
+.display .down.houses_down{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    background: white;
+    transition: 1s;
+}
+
+.display .down.houses_down:hover{
+    height: 250px;
+}
+
+.display .down.houses_down > label{
+    position: absolute;
+    top: -17px;
+    color: blue;
+    font-size: 14px;
+    font-weight: 800;
+    border: solid white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    padding: 2px 10px;
+    background: white;
+    z-index: 1;
+}
+
+.display .down.houses_down > label i{
+    transition: 1s;
+}
+
+.display .down.houses_down:hover > label i{
+    transform: rotate(-180deg);
+}
+
+.display .down.houses_down .buttons{
+    transform: translateY(1000%);
+    transition: 1s;
+}
+
+.display .down.houses_down:hover .buttons{
+    transform: translateY(0);
+}
+
+.display .down.houses_down .buttons a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    background: blue;
+}
+
+.display .down.houses_down .buttons a:hover{
+    background: darkblue;
+}
+
+
+
+
+
+/*-------------sale and rent page css in houses_container found in user_page-------------*/
+.container{
+    width: 100%;
+    padding: 50px;
+}
+
+.container .style .display{
+    padding-bottom: 50px;
+}
+
+.container .style .display h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container .style .display h1 span{
+    color: blue;
+}
+
+.container .style  .display .search{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.container .style  .display .search input{
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    padding-right: 90px;
+    background: rgb(231, 230, 230);
+}
+
+.container .style  .display .search button{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: blue;
+}
+
+.container .style  .display .search button:hover{
+    background: darkblue;
+}
+
+.container .style .display .buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container .style .display .buttons button{
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: blue;
+}
+
+.container .style .display .buttons button:hover{
+    background: darkblue;
+}
+
+.houses_container1{
+    position: relative;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 100px;
+    margin-bottom: 100px;
+}
+
+.houses_container2{
+    position: relative;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 100px;
+    margin-bottom: 100px;
+}
+
+.container .style .display .houses{
+    position: relative;
+    border: transparent;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    width: 350px;
+    height: 430px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.container .style .display .houses .image{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.container .style .display .houses .image img{
+    filter: brightness(60%);
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.container .style .display .houses:hover .image img{
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+.container .style .display .houses .details{
+    width: 100%;
+    height: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #00082c;
+}
+
+.container .style .display .houses .details h4{
+    color: white;
+    font-weight: 800;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+.container .style .display .houses .details p{
+    display: inline;
+    color: gray;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.container .style .display .houses .details p:nth-of-type(2){
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 5px;
+    backdrop-filter: blur(20px);
+    text-shadow: 5px 5px 10px black;
+}
+
+.container .style .display .houses .details i{
+    color: gray;
+    margin-right: 10px;
+}
+
+.container .style .display .houses .slide{
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid white;
+    border-radius: 10px;
+    height: 30px;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #00082c;
+    transition: 1s;
+}
+
+.container .style .display .houses .slide:hover{
+    height: 200px;
+}
+
+.container .style .display .houses .slide div{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+}
+
+.container .style .display .houses .slide div i{
+    margin-right: 2px;
+}
+
+.container .style .display .houses .slide a{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px 5px;
+    background: transparent;
+}
+
+.container .style .display .houses .slide a:hover{
+    border: 1px solid darkblue;
+    background: darkblue;
+}
+
+.container .style .display .houses .slide a:last-of-type:hover{
+    border: 1px solid darkred;
+    background: darkred;
+}
+
+
+
+
+
+/*-------------notifications_down-------------*/
+.display .down.notifications_down{
+    position: absolute;
+    bottom: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background: white;
+    overflow-y: scroll;
+    ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: 1s;
+}
+
+.display .down.notifications_down::-webkit-scrollbar{
+    display: none;
+}
+
+.display .down.notifications_down:hover{
+    height: 480px;
+}
+
+.display .down.notifications_down .list{
+    display: flex;
+    border-bottom: 1px solid gray;
+    width: 720px;
+    height: 70px;
+    padding: 10px;
+    overflow: hidden;
+    transform: translateY(1000%);
+    transition: 1s;
+}
+
+.display .down.notifications_down:hover .list{
+    transform: translateY(0);
+}
+
+.display .down.notifications_down .list img{
+    cursor: pointer;
+    border-radius: 100px;
+    margin: 0;
+    margin-right: 5px;
+}
+
+.display .down.notifications_down .list img:hover{
+    transform: scale(1.09);
+}
+
+.display .down.notifications_down .list p{
+    color: gray;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.display .down.notifications_down .list p span{
+    color: gray;
+    margin-left: 20px;
+}
+
+.display .down.notifications_down .list p:first-of-type{
+    color: blue;
+    font-weight: 600;
+}
+
+
+
+
+
+/*-------------***Responsive***-------------*/

@@ -1,0 +1,302 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #00082c;
+}
+
+input[type="number"]{ /**/
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button{ /**/
+    -webkit-appearance: none;
+}
+
+
+
+
+
+/*-------------***section 1***-------------*/
+.section_1{
+    position: fixed;
+    color: white;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: 1s;
+}
+
+
+/*-------------header-------------*/
+.section_1 header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7vh 2vh;
+}
+
+.section_1 header p{
+    color: white;
+    font-weight: 600;
+}
+
+.section_1 header p span{
+    color: gray;
+}
+
+
+/*-------------main-------------*/
+.section_1 main{
+    padding-top: 70px;
+}
+
+.section_1 main a{
+    text-decoration: none;
+}
+
+.section_1 main p i{
+    color: white;
+    font-size: 14px;
+    margin-right: 7px;
+}
+
+.section_1 main p{
+    cursor: pointer;
+    color: white;
+    font-weight: 400;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.section_1 main p:hover{
+    background: #303030;
+}
+
+
+
+
+
+/*-------------***section 2***-------------*/
+.section_2{
+    color: white;
+    width: 100%;
+    transition: 1s;
+}
+
+
+/*-------------header-------------*/
+.section_2 header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 0;
+}
+
+.section_2 header .search_bar{
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.section_2 header .search_bar input{
+    color: white;
+    border: none;
+    border: 1px solid white;
+    border-radius: 100px 0 0 100px;
+    width: 500px;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+}
+
+.section_2 header .search_bar button{
+    cursor: pointer;
+    color: #00082c;
+    border: none;
+    border: 1px solid #303030;
+    border-radius: 0 100px 100px 0;
+    width: 70px;
+    padding: 15px;
+    background: white;
+}
+
+.section_2 header .search_bar button:hover{
+    color: white;
+    border: 1px solid gray;
+    background: gray;
+}
+
+
+/*-------------main-------------*/
+.section_2 main{
+    padding: 6vh 2vw;
+}
+
+.section_2 main .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.section_2 main .top p:first-of-type{
+    color: white;
+    font-weight: 600;
+}
+
+.section_2 main .top p:last-of-type{
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    background: #303030;
+}
+
+.section_2 main .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    grid-row-gap: 80px;
+}
+
+.section_2 main .houses{
+    position: relative;
+}
+
+.section_2 main #cards{
+    position: relative;
+    border-radius: 20px;
+    width: 360px;
+    height: 200px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.section_2 main #cards .image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.section_2 main #cards .image img{
+    filter: brightness(60%);
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.section_2 main #cards:hover .image img{
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+.section_2 main #cards #details{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 330px;
+    height: 0;
+    padding-left: 10px;
+    padding-right: 20px;
+    background: #303030;
+    transition: 1s;
+}
+
+.section_2 main #cards:hover #details{
+    height: 199px;
+}
+
+.section_2 main #cards #details h1{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.section_2 main #cards #details p{
+    display: inline;
+}
+
+.section_2 main #cards #details i{
+    margin-right: 10px;
+}
+
+.section_2 main #cards #details p:first-of-type{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    border-radius: 100px;
+    padding: 5px;
+    backdrop-filter: blur(20px);
+    text-shadow: 5px 5px 10px black;
+    transition: 1s;
+}
+
+.section_2 main #cards #details p:nth-of-type(n+4){
+    display: inline;
+}
+
+.section_2 main #cards #details a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px 5px;
+    background: darkblue;
+}
+
+.section_2 main #cards #details a:hover{
+    background: rgb(1, 1, 99);
+}
+
+.section_2 main .description{
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    color: white;
+    z-index: 3;
+}
+
+.section_2 main .description img{
+    cursor: pointer;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+
+/*-------------footer-------------*/
+.section_2 footer .no_result{
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.display_none{
+    display: none;
+}
+
+
+
+
+
+/*-------------additional css-------------*/
+.section_2 .style{
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}

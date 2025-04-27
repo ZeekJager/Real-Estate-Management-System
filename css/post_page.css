@@ -1,0 +1,333 @@
+*{
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    background: #00082c;
+}
+
+
+
+
+
+/*-------------***section_1***-------------*/
+.section_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 76px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.section_1 nav a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    padding: 5px;
+    transition: 1s;
+}
+
+.section_1 nav a:hover{
+    background: #303030;
+}
+
+.section_1 nav a i{
+    font-size: 17px;
+    margin-bottom: 8px;
+    transition: 1s;
+}
+
+.section_1 nav a span{
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: 1s;
+}
+
+
+
+
+
+/*-------------***section_2***-------------*/
+.section_2{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+
+/*-------------header-------------*/
+.section_2 header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.section_2 header .search_bar form{
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.section_2 header .search_bar input{
+    color: white;
+    border: none;
+    border: 1px solid white;
+    border-radius: 100px 0 0 100px;
+    width: 500px;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+}
+
+.section_2 header .search_bar button{
+    cursor: pointer;
+    color: white;
+    border: none;
+    border: 1px solid white;
+    border-radius: 0 100px 100px 0;
+    width: 70px;
+    padding: 15px;
+    background: white;
+}
+
+.section_2 header .search_bar button i{
+    color: #00082c;
+}
+
+.section_2 header .search_bar button:hover{
+    border: 1px solid gray;
+    background: gray;
+}
+
+.section_2 header .user_image img{
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+
+/*-------------main-------------*/
+.section_2 main{
+    position: relative;
+    flex-grow: 1;
+    padding: 0 0 20px 0;
+}
+
+.section_2 main .video_container{
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+
+/*-------------video-------------*/
+.section_2 main .video_container .video{
+    position: relative;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 350px;
+    height: 100%;
+    background: #00082c;
+    overflow: hidden;
+    z-index: 1;
+    transition: 1s;
+}
+
+.section_2 main .video_container .video video{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.section_2 main .video_container .video .video_details{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 97.2%;
+    padding: 12px 5px;
+    backdrop-filter: blur(20px);
+    z-index: 2;
+}
+
+.section_2 main .video_container .video .video_details img{
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.section_2 main .video_container .video .video_details p{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 5px 5px 10px black;
+}
+
+
+/*-------------comment section-------------*/
+.section_2 main .video_container .comment_section{
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 0;
+    background: #303030;
+    transition: 1s;
+}
+
+.section_2 main .video_container .comment_section .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.section_2 main .video_container .comment_section .top p{
+    color: white;
+}
+
+.section_2 main .video_container .comment_section .top i{
+    cursor: pointer;
+    color: white;
+}
+
+.section_2 main .video_container .comment_section .comment_area{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin: 5px 0 5px 0;
+    padding: 20px 0 20px 0;
+}
+
+.section_2 main .video_container .comment_section .comment_area .comment{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.section_2 main .video_container .comment_section .comment_area .comment img{
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.section_2 main .video_container .comment_section .comment_area .comment p{
+    color: white;
+    font-size: 14px;
+}
+
+.section_2 main .video_container .comment_section .comment_area .comment p:first-of-type{
+    color: gray;
+}
+
+.section_2 main .video_container .comment_section .typing_area input{
+    color: white;
+    border: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+    background: transparent;
+    outline: none;
+}
+
+.section_2 main .video_container .comment_section .typing_area button{
+    display: none;
+}
+
+
+/*-------------stat-------------*/
+.section_2 main .video_container .stat{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.section_2 main .video_container .stat p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_2 main .video_container .stat p i{
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+/*-------------arrows-------------*/
+.section_2 main .arrows{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.section_2 main .arrows p{
+    font-size: 25px;
+    margin-bottom: 100px;
+}
+
+.section_2 main .arrows p i{
+    cursor: pointer;
+}
+
+
+
+
+
+/*-------------***Responsive***-------------*/
+@media (max-width: 840px) {
+    .user_image{
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 700px) {
+    #video{
+        width: 250px;
+    }
+    
+    .section_2 header .search_bar input{
+        color: #00082c;
+        border: none;
+        border: 1px solid #00082c;
+        border-radius: 100px 0 0 100px;
+        width: 300px;
+        padding: 15px;
+        background: transparent;
+        outline: none;
+    }
+
+    .section_2 header .search_bar button{
+        cursor: pointer;
+        color: white;
+        border: none;
+        border: 1px solid #00082c;
+        border-radius: 0 100px 100px 0;
+        width: 70px;
+        padding: 15px;
+        background: #00082c;
+    }
+}

@@ -1,0 +1,43 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+
+
+/*-------------***container***-------------*/
+.container{
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    padding: 20px;
+}
+
+.container h2{
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container h2 span{
+    color: #00082c;
+}
+
+.container h3{
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container h3 span{
+    color: #00082c;
+}

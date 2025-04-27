@@ -1,0 +1,457 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.div_top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 642px;
+    z-index: -1;
+}
+
+.div_top_2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 642px;
+    z-index: -1;
+}
+
+.rating{
+    position: fixed;
+    top: 120px;
+    left: 20%;
+    color: white;
+    border-radius: 10px;
+    width:  0px;
+    height: 0px;
+    background: #00082c;
+    box-shadow: 5px 5px 10px black;
+    overflow: hidden;
+    transition: 1s;
+    z-index: 4;
+}
+
+.rating h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.rating p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.rating div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rating button{
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: transparent;
+    transition: 1s;
+}
+
+.rating button:hover{
+    transform: scale(1.1);
+    border: 1px solid darkblue;
+    background: darkblue;
+}
+
+
+
+
+
+/*-------------header-------------*/
+header{
+    height: 360px;
+    padding-top: 50px;
+    padding-left: 30px;
+}
+
+
+/*-------------image part-------------*/
+header .images{
+    position: relative;
+    cursor: pointer;
+    width: 64.5%;
+    height: 360px;
+    z-index: 2;
+    transition: 1s;
+}
+
+header .images .house_images{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+header .images .arrow_left{
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    left: 10px;
+}
+
+header .images .arrow_right{
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    right: 10px;
+}
+
+header .images .arrow_left:hover{
+    filter: brightness(0);
+}
+
+header .images .arrow_right:hover{
+    filter: brightness(0);
+}
+
+
+/*-------------review box-------------*/
+header .review_section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 30%;
+    height: 603px;
+    padding: 20px;
+    background: #00082c;
+    overflow: hidden;
+    transition: 1s;
+}
+
+header .review_section .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+header .review_section .top i{
+    cursor: pointer;
+}
+
+header .review_section .reviews{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+    overflow-y: scroll;
+    ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+header .review_section .reviews::-webkit-scrollbar{
+    display: none;
+}
+
+header .review_section .reviews .review{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header .review_section .reviews .review img{
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+header .review_section .reviews .review p{
+    color: gray;
+    font-size: 14px;
+}
+
+header .review_section .reviews .review p:last-of-type{
+    color: white;
+}
+
+header .review_section .type_review{
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+}
+
+header .review_section .type_review input{
+    color: white;
+    border: none;
+    border: 1px solid white;
+    border-radius: 100px;
+    width: 90%;
+    padding: 10px 20px;
+    background: transparent;
+    outline: none;
+}
+
+header .review_section .type_review button{
+    display: none;
+}
+
+
+
+
+
+/*-------------main-------------*/
+main{
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+    padding: 0 30px 8px 30px;
+    transition: 1s;
+}
+
+main .stat{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    color: #00082c;
+    padding-top: 3px;
+}
+
+main .stat span{
+    color: gray;
+}
+
+main .stat span i{
+    cursor: pointer;
+}
+
+main p:first-of-type{
+    display: flex;
+    align-items: center;
+    color: #00082c;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+main p{
+    color: gray;
+    margin-bottom: 15px;
+}
+
+main p img{
+    margin-right: 10px;
+}
+
+main .location_and_date span{
+    color: gray;
+    margin-right: 50px;
+}
+
+main span i{
+    color: #00082c;
+    margin-right: 5px;
+}
+
+main .buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+main .buttons a{
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #00082c;
+    transition: 1s;
+}
+
+main .buttons a:hover{
+    transform: scale(1.1);
+}
+
+main .buttons a i{
+    color: white;
+    margin-right: 5px;
+}
+
+
+
+
+
+/*-------------footer-------------*/
+footer{
+    padding: 6vh 5vw;
+    background: #f1f1f1;
+    transition: 1s;
+}
+
+footer .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+footer .top p:first-of-type{
+    color: #00082c;
+    font-weight: 600;
+}
+
+footer .top p:last-of-type{
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    background: gray;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
+}
+
+footer .houses{
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #00082c;
+    width: 350px;
+    height: 450px;
+    background: white;
+    overflow: hidden;
+    transition: 1s;
+}
+
+footer .houses:hover{
+    transform: scale(1.02);
+}
+
+footer .houses .image{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+footer .houses .image img{
+    filter: brightness(60%);
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+footer .houses:hover .image img{
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+footer .houses .details{
+    width: 318px;
+    height: 200px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+footer .houses .details h1{
+    color: #00082c;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+footer .houses .details p{
+    display: inline;
+    color: gray;
+}
+
+footer .houses .details i{
+    color: #00082c;
+    margin-right: 10px;
+}
+
+footer .houses .details p:first-of-type{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    font-size: 12px;
+    border-radius: 100px;
+    padding: 5px;
+    backdrop-filter: blur(20px);
+    text-shadow: 5px 5px 10px black;
+    filter: brightness(60%);
+    transition: 1s;
+}
+
+footer .houses:hover .details p:first-of-type{
+    filter: brightness(100%);
+}
+
+footer .houses .details a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px 5px;
+    background: darkblue;
+}
+
+footer .houses .details a:hover{
+    background: #00082c;
+}
+
+
+
+
+
+/*-------------for the java script-------------*/
+.image_fade{
+    animation: image_fade 1s ease-in-out;
+}
+
+
+@keyframes image_fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+
+
+
+/*-------------additional css-------------*/
+header .style{
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 50px;
+}
+
+footer .style{
+    color: blue;
+    font-weight: 600;
+    text-align: center;
+}

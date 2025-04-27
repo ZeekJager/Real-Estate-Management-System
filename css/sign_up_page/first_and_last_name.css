@@ -1,0 +1,83 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../../assets/house_with_blue_swimming_pool.jpg");
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+
+
+
+
+/*-------------***container***-------------*/
+.container{
+    font-weight: 600;
+    border-radius: 30px;
+    width: 750px;
+    height: 300px;
+    padding: 30px;
+    background: white;
+    box-shadow: 5px 5px 10px black;
+}
+
+.container img{
+    margin-bottom: 20px;
+}
+
+.container .texts_and_inputs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .texts h1{
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.container .texts p{
+    color: gray;
+    font-weight: 500;
+}
+
+.container .inputs form{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.container .inputs input{
+    border: none;
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: transparent;
+    outline: none;
+}
+
+.container .inputs button{
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background: rgb(63, 63, 255);
+    transition: 1s;
+}
+
+.container .inputs button:hover{
+    background: darkblue;
+}
