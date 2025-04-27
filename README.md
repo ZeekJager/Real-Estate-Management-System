@@ -24,7 +24,7 @@ This project was built to practice full-stack web development skills, including 
 - Add messaging/chat system between clients and agents
 
 ## 📸 Screenshots
-*(Add screenshots here if you have any)*
+*(To be uploaded)*
 
 ## 🧑‍💻 Installation
 1. Clone the repository
